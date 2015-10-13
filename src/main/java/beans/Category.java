@@ -3,7 +3,7 @@ package beans;
 /**
  * Created by Вика on 10.10.2015.
  */
-public class Categories {
+public class Category {
     /*
     CREATE TABLE `categoies` (
   `PRODUCT_TYPE` varchar(100) NOT NULL,
@@ -15,10 +15,21 @@ public class Categories {
 
      */
     String productType;
+    String producyTitle;
     int categoriesID;
 
-    public Categories() {
+    public Category() {
     }
+
+
+    public String getProducyTitle() {
+        return producyTitle;
+    }
+
+    public void setProducyTitle(String producyTitle) {
+        this.producyTitle = producyTitle;
+    }
+
 
     public String getProductType() {
         return productType;
@@ -41,24 +52,27 @@ public class Categories {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Categories that = (Categories) o;
+        Category category = (Category) o;
 
-        if (categoriesID != that.categoriesID) return false;
-        return productType.equals(that.productType);
+        if (categoriesID != category.categoriesID) return false;
+        if (!productType.equals(category.productType)) return false;
+        return producyTitle.equals(category.producyTitle);
 
     }
 
     @Override
     public int hashCode() {
         int result = productType.hashCode();
+        result = 31 * result + producyTitle.hashCode();
         result = 31 * result + categoriesID;
         return result;
     }
 
     @Override
     public String toString() {
-        return "beans.Categories{" +
+        return "Category{" +
                 "productType='" + productType + '\'' +
+                ", producyTitle='" + producyTitle + '\'' +
                 ", categoriesID=" + categoriesID +
                 '}';
     }

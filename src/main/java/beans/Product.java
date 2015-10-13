@@ -3,7 +3,7 @@ package beans;
 /**
  * Created by Вика on 10.10.2015.
  */
-public class Products {
+public class Product {
     /*
     CREATE TABLE `products` (
   `CATEGORY_ID` int(20) NOT NULL,
@@ -20,22 +20,31 @@ public class Products {
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
      */
-    int categotyID;
+    int categoryID;
     String title;
+    String productType;
     double price;
     String discription;
     int quantity;
     int productID;
 
-    public Products() {
+    public Product() {
     }
 
-    public int getCategotyID() {
-        return categotyID;
+    public String getProductType() {
+        return productType;
     }
 
-    public void setCategotyID(int categotyID) {
-        this.categotyID = categotyID;
+    public void setProductType(String productType) {
+        this.productType = productType;
+    }
+
+    public int getCategoryID() {
+        return categoryID;
+    }
+
+    public void setCategoryID(int categoryID) {
+        this.categoryID = categoryID;
     }
 
     public String getTitle() {
@@ -83,14 +92,15 @@ public class Products {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Products products = (Products) o;
+        Product product = (Product) o;
 
-        if (categotyID != products.categotyID) return false;
-        if (Double.compare(products.price, price) != 0) return false;
-        if (quantity != products.quantity) return false;
-        if (productID != products.productID) return false;
-        if (!title.equals(products.title)) return false;
-        return discription.equals(products.discription);
+        if (categoryID != product.categoryID) return false;
+        if (Double.compare(product.price, price) != 0) return false;
+        if (quantity != product.quantity) return false;
+        if (productID != product.productID) return false;
+        if (!title.equals(product.title)) return false;
+        if (!productType.equals(product.productType)) return false;
+        return discription.equals(product.discription);
 
     }
 
@@ -98,8 +108,9 @@ public class Products {
     public int hashCode() {
         int result;
         long temp;
-        result = categotyID;
+        result = categoryID;
         result = 31 * result + title.hashCode();
+        result = 31 * result + productType.hashCode();
         temp = Double.doubleToLongBits(price);
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         result = 31 * result + discription.hashCode();
@@ -110,9 +121,10 @@ public class Products {
 
     @Override
     public String toString() {
-        return "Products{" +
-                "categotyID=" + categotyID +
+        return "Product{" +
+                "categoryID=" + categoryID +
                 ", title='" + title + '\'' +
+                ", productType='" + productType + '\'' +
                 ", price=" + price +
                 ", discription='" + discription + '\'' +
                 ", quantity=" + quantity +

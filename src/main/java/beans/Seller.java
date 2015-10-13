@@ -3,7 +3,7 @@ package beans;
 /**
  * Created by Вика on 10.10.2015.
  */
-public class Sellers {
+public class Seller {
     /*
 CREATE TABLE `sellers` (
   `FIRSTNAME` varchar(50) NOT NULL,
@@ -30,7 +30,7 @@ CREATE TABLE `sellers` (
     String email;
     int sellersID;
 
-    public Sellers() {
+    public Seller() {
     }
 
     public String getFirstName() {
@@ -94,15 +94,15 @@ CREATE TABLE `sellers` (
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Sellers sellers = (Sellers) o;
+        Seller seller = (Seller) o;
 
-        if (phoneNumber != sellers.phoneNumber) return false;
-        if (sellersID != sellers.sellersID) return false;
-        if (!firstName.equals(sellers.firstName)) return false;
-        if (!surName.equals(sellers.surName)) return false;
-        if (!login.equals(sellers.login)) return false;
-        if (!password.equals(sellers.password)) return false;
-        return email.equals(sellers.email);
+        if (phoneNumber != seller.phoneNumber) return false;
+        if (sellersID != seller.sellersID) return false;
+        if (!firstName.equals(seller.firstName)) return false;
+        if (!surName.equals(seller.surName)) return false;
+        if (!login.equals(seller.login)) return false;
+        if (!password.equals(seller.password)) return false;
+        return email.equals(seller.email);
 
     }
 
@@ -120,7 +120,7 @@ CREATE TABLE `sellers` (
 
     @Override
     public String toString() {
-        return "beans.Sellers{" +
+        return "beans.Seller{" +
                 "firstName='" + firstName + '\'' +
                 ", surName='" + surName + '\'' +
                 ", phoneNumber=" + phoneNumber +

@@ -3,7 +3,7 @@ package beans;
 /**
  * Created by Вика on 10.10.2015.
  */
-public class Customers {
+public class Customer {
     /*
 CREATE TABLE `customers` (
   `FIRSTNAME` varchar(50) NOT NULL,
@@ -37,10 +37,10 @@ CREATE TABLE `customers` (
     String login;
     String password;
     String email;
-    int purchaseID;
+    int orderID;
     int customersID;
 
-    public Customers() {
+    public Customer() {
     }
 
     public String getFirstName() {
@@ -107,15 +107,7 @@ CREATE TABLE `customers` (
         this.email = email;
     }
 
-    public int getPurchaseID() {
-        return purchaseID;
-    }
-
-    public void setPurchaseID(int purchaseID) {
-        this.purchaseID = purchaseID;
-    }
-
-    public int getCustomersID() {
+       public int getCustomersID() {
         return customersID;
     }
 
@@ -123,23 +115,31 @@ CREATE TABLE `customers` (
         this.customersID = customersID;
     }
 
+    public int getOrderID() {
+        return orderID;
+    }
+
+    public void setOrderID(int orderID) {
+        this.orderID = orderID;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Customers customers = (Customers) o;
+        Customer customer = (Customer) o;
 
-        if (phoneNumber != customers.phoneNumber) return false;
-        if (postIndex != customers.postIndex) return false;
-        if (purchaseID != customers.purchaseID) return false;
-        if (customersID != customers.customersID) return false;
-        if (!firstName.equals(customers.firstName)) return false;
-        if (!surName.equals(customers.surName)) return false;
-        if (!address.equals(customers.address)) return false;
-        if (!login.equals(customers.login)) return false;
-        if (!password.equals(customers.password)) return false;
-        return email.equals(customers.email);
+        if (phoneNumber != customer.phoneNumber) return false;
+        if (postIndex != customer.postIndex) return false;
+        if (orderID != customer.orderID) return false;
+        if (customersID != customer.customersID) return false;
+        if (!firstName.equals(customer.firstName)) return false;
+        if (!surName.equals(customer.surName)) return false;
+        if (!address.equals(customer.address)) return false;
+        if (!login.equals(customer.login)) return false;
+        if (!password.equals(customer.password)) return false;
+        return email.equals(customer.email);
 
     }
 
@@ -153,14 +153,14 @@ CREATE TABLE `customers` (
         result = 31 * result + login.hashCode();
         result = 31 * result + password.hashCode();
         result = 31 * result + email.hashCode();
-        result = 31 * result + purchaseID;
+        result = 31 * result + orderID;
         result = 31 * result + customersID;
         return result;
     }
 
     @Override
     public String toString() {
-        return "beans.Customers{" +
+        return "Customer{" +
                 "firstName='" + firstName + '\'' +
                 ", surName='" + surName + '\'' +
                 ", phoneNumber=" + phoneNumber +
@@ -169,7 +169,7 @@ CREATE TABLE `customers` (
                 ", login='" + login + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
-                ", purchaseID=" + purchaseID +
+                ", orderID=" + orderID +
                 ", customersID=" + customersID +
                 '}';
     }

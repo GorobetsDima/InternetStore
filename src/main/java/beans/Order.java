@@ -3,7 +3,7 @@ package beans;
 /**
  * Created by Вика on 10.10.2015.
  */
-public class Orders {
+public class Order {
     /*
 CREATE TABLE `orders` (
   `DATE` datetime NOT NULL,
@@ -34,9 +34,18 @@ CREATE TABLE `orders` (
     double productPrice;
     double cost;
     String status;
+    int paymentID;
     int orderID;
 
-    public Orders() {
+    public Order() {
+    }
+
+    public int getPaymentID() {
+        return paymentID;
+    }
+
+    public void setPaymentID(int paymentID) {
+        this.paymentID = paymentID;
     }
 
     public char getDate() {
@@ -116,17 +125,18 @@ CREATE TABLE `orders` (
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Orders orders = (Orders) o;
+        Order order = (Order) o;
 
-        if (date != orders.date) return false;
-        if (customerID != orders.customerID) return false;
-        if (sellerID != orders.sellerID) return false;
-        if (quantity != orders.quantity) return false;
-        if (basketID != orders.basketID) return false;
-        if (Double.compare(orders.productPrice, productPrice) != 0) return false;
-        if (Double.compare(orders.cost, cost) != 0) return false;
-        if (orderID != orders.orderID) return false;
-        return status.equals(orders.status);
+        if (date != order.date) return false;
+        if (customerID != order.customerID) return false;
+        if (sellerID != order.sellerID) return false;
+        if (quantity != order.quantity) return false;
+        if (basketID != order.basketID) return false;
+        if (Double.compare(order.productPrice, productPrice) != 0) return false;
+        if (Double.compare(order.cost, cost) != 0) return false;
+        if (paymentID != order.paymentID) return false;
+        if (orderID != order.orderID) return false;
+        return status.equals(order.status);
 
     }
 
@@ -144,13 +154,14 @@ CREATE TABLE `orders` (
         temp = Double.doubleToLongBits(cost);
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         result = 31 * result + status.hashCode();
+        result = 31 * result + paymentID;
         result = 31 * result + orderID;
         return result;
     }
 
     @Override
     public String toString() {
-        return "Orders{" +
+        return "Order{" +
                 "date=" + date +
                 ", customerID=" + customerID +
                 ", sellerID=" + sellerID +
@@ -159,6 +170,7 @@ CREATE TABLE `orders` (
                 ", productPrice=" + productPrice +
                 ", cost=" + cost +
                 ", status='" + status + '\'' +
+                ", paymentID=" + paymentID +
                 ", orderID=" + orderID +
                 '}';
     }
