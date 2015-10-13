@@ -3,7 +3,7 @@ package interfaces.daos;
 import beans.Seller;
 
 /**
- * Created by Вика on 12.10.2015.
+ * Created by Dmitriy on 12.10.2015.
  */
 public interface SellersDAO {
     boolean addSeller(Seller seller);
@@ -13,6 +13,8 @@ public interface SellersDAO {
     Seller getSellerByEmail(String email);
 
     Seller getSellerByLogin(String login);
+
+    boolean removeSellerByID(int sellerID);
 
     boolean updateSeller(Seller seller);
 }

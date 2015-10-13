@@ -1,7 +1,7 @@
 package beans;
 
 /**
- * Created by Вика on 10.10.2015.
+ * Created by Dmitriy on 12.10.2015.
  */
 public class Order {
     /*
@@ -26,11 +26,11 @@ CREATE TABLE `orders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
      */
-    char date;
+    char date;//?????
     int customerID;
     int sellerID;
     int quantity;
-    int basketID;
+    int productID;
     double productPrice;
     double cost;
     String status;
@@ -80,12 +80,12 @@ CREATE TABLE `orders` (
         this.quantity = quantity;
     }
 
-    public int getBasketID() {
-        return basketID;
+    public int getProductID() {
+        return productID;
     }
 
-    public void setBasketID(int basketID) {
-        this.basketID = basketID;
+    public void setProductID(int productID) {
+        this.productID = productID;
     }
 
     public double getProductPrice() {
@@ -131,7 +131,7 @@ CREATE TABLE `orders` (
         if (customerID != order.customerID) return false;
         if (sellerID != order.sellerID) return false;
         if (quantity != order.quantity) return false;
-        if (basketID != order.basketID) return false;
+        if (productID != order.productID) return false;
         if (Double.compare(order.productPrice, productPrice) != 0) return false;
         if (Double.compare(order.cost, cost) != 0) return false;
         if (paymentID != order.paymentID) return false;
@@ -148,7 +148,7 @@ CREATE TABLE `orders` (
         result = 31 * result + customerID;
         result = 31 * result + sellerID;
         result = 31 * result + quantity;
-        result = 31 * result + basketID;
+        result = 31 * result + productID;
         temp = Double.doubleToLongBits(productPrice);
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         temp = Double.doubleToLongBits(cost);
@@ -166,7 +166,7 @@ CREATE TABLE `orders` (
                 ", customerID=" + customerID +
                 ", sellerID=" + sellerID +
                 ", quantity=" + quantity +
-                ", basketID=" + basketID +
+                ", productID=" + productID +
                 ", productPrice=" + productPrice +
                 ", cost=" + cost +
                 ", status='" + status + '\'' +

@@ -4,7 +4,7 @@ import beans.Category;
 import beans.Product;
 
 /**
- * Created by Вика on 12.10.2015.
+ * Created by Dmitriy on 12.10.2015.
  */
 public interface ProductsDAO {
     boolean addProduct(Product product);

@@ -1,7 +1,7 @@
 package beans;
 
 /**
- * Created by Вика on 10.10.2015.
+ * Created by Dmitriy on 12.10.2015.
  */
 public class Seller {
     /*

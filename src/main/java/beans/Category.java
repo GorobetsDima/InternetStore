@@ -1,7 +1,7 @@
 package beans;
 
 /**
- * Created by Вика on 10.10.2015.
+ * Created by Dmitriy on 12.10.2015.
  */
 public class Category {
     /*
@@ -15,19 +15,19 @@ public class Category {
 
      */
     String productType;
-    String producyTitle;
+    String productTitle;
     int categoriesID;
 
     public Category() {
     }
 
 
-    public String getProducyTitle() {
-        return producyTitle;
+    public String getProductTitle() {
+        return productTitle;
     }
 
-    public void setProducyTitle(String producyTitle) {
-        this.producyTitle = producyTitle;
+    public void setProductTitle(String productTitle) {
+        this.productTitle = productTitle;
     }
 
 
@@ -56,14 +56,14 @@ public class Category {
 
         if (categoriesID != category.categoriesID) return false;
         if (!productType.equals(category.productType)) return false;
-        return producyTitle.equals(category.producyTitle);
+        return productTitle.equals(category.productTitle);
 
     }
 
     @Override
     public int hashCode() {
         int result = productType.hashCode();
-        result = 31 * result + producyTitle.hashCode();
+        result = 31 * result + productTitle.hashCode();
         result = 31 * result + categoriesID;
         return result;
     }
@@ -72,7 +72,7 @@ public class Category {
     public String toString() {
         return "Category{" +
                 "productType='" + productType + '\'' +
-                ", producyTitle='" + producyTitle + '\'' +
+                ", productTitle='" + productTitle + '\'' +
                 ", categoriesID=" + categoriesID +
                 '}';
     }
