@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/.idea/.name" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/beans/Basket.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/beans/Category.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/beans/Customer.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/beans/Order.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/beans/Payment.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/beans/Product.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/beans/Purchase.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/beans/Seller.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/implementations/daos/CategoryDaoImpl.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/implementations/daos/CustomerDaoImpl.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/implementations/daos/OrderDaoImpl.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/implementations/daos/PaymentDaoImpl.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/implementations/daos/ProductDaoImpl.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/implementations/daos/SellerDaoImpl.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/implementations/services/Authorization.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/implementations/services/Searcher.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/interfaces/daos/BasketsDAO.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/interfaces/daos/CategoriesDAO.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/interfaces/daos/CustomersDAO.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/interfaces/daos/OrdersDAO.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/interfaces/daos/PaymentDAO.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/interfaces/daos/ProductsDAO.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/interfaces/daos/SellersDAO.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/interfaces/services/AuthorizationService.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/interfaces/services/SearcherService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/DBConnection.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/beans/Category.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/beans/Customer.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/beans/Order.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/beans/Payment.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/beans/Product.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/beans/Seller.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/implementations/daos/CategoryDaoImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/implementations/daos/CustomerDaoImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/implementations/daos/OrderDaoImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/implementations/daos/PaymentDaoImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/implementations/daos/ProductDaoImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/implementations/daos/SellerDaoImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/implementations/services/Authorization.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/implementations/services/Searcher.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/interfaces/daos/CategoriesDAO.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/interfaces/daos/CustomersDAO.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/interfaces/daos/OrdersDAO.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/interfaces/daos/PaymentDAO.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/interfaces/daos/ProductsDAO.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/interfaces/daos/SellersDAO.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/interfaces/services/AuthorizationService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/interfaces/services/SearcherService.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/index.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/com/implementations/daos/ProductDaoImplTest.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
