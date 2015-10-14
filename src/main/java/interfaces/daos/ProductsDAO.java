@@ -3,6 +3,8 @@ package interfaces.daos;
 import beans.Category;
 import beans.Product;
 
+import java.util.List;
+
 /**
  * Created by Dmitriy on 12.10.2015.
  */
@@ -20,6 +22,10 @@ public interface ProductsDAO {
     boolean removeProductByID(Product product);
 
     boolean updateProduct(Product product);
+
+    List<Product> getAllProducts();
+
+    List<Product> getAllProductsByCategory(int categoryID);
 
 
 }

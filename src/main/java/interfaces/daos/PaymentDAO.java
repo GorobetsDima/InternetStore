@@ -2,6 +2,8 @@ package interfaces.daos;
 
 import beans.Payment;
 
+import java.util.List;
+
 /**
  * Created by Dmitriy on 12.10.2015.
  */
@@ -11,5 +13,7 @@ public interface PaymentDAO {
     Payment getPaymentMethodByID(int paymentID);
 
     boolean update(Payment payment);
+
+    List<Payment> getAllPayments();
 
 }

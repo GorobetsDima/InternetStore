@@ -3,6 +3,8 @@ package interfaces.daos;
 import beans.Customer;
 import beans.Order;
 
+import java.util.List;
+
 /**
  * Created by Dmitriy on 12.10.2015.
  */
@@ -20,4 +22,6 @@ public interface CustomersDAO {
     boolean removeCustomerByID(int customerID);
 
     boolean updateCustomer(Customer customer);
+
+    List<Customer> getAllCustoners();
 }

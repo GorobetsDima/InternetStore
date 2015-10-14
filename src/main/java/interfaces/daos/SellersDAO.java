@@ -2,6 +2,8 @@ package interfaces.daos;
 
 import beans.Seller;
 
+import java.util.List;
+
 /**
  * Created by Dmitriy on 12.10.2015.
  */
@@ -17,4 +19,5 @@ public interface SellersDAO {
     boolean removeSellerByID(int sellerID);
 
     boolean updateSeller(Seller seller);
+    List<Seller> getAllSellers();
 }
